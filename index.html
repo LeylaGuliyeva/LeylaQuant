@@ -508,7 +508,7 @@
   <footer>© 2026 LEYLA G. — LEYLAQUANT.COM — ALL RIGHTS RESERVED</footer>
 
   <script>
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxP8Fy9zHKrhB6e0QtibdFSsyEtm8bIffJ5uExE61cresXiSwnocMrX5AtyIDPwTUvQ/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw7Cy5fC8kHkEWqaILCPSH_GKinxwAzOqbe7R0NqpIOYY7sxooKkscz1wdGB7ZprrHv/exec";
 
     function updateClock() {
       const now = new Date();
@@ -559,7 +559,7 @@
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ vote: selected, ip: userIP || 'unknown' })
+          body: JSON.stringify({ vote: selected, ip: userIP || 'unknown', source: 'leylaquant' })
         });
 
         // Save IP to localStorage
