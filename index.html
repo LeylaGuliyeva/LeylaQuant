@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leyla G. — leylaquant.com</title>
+  <title>Home</title>
+  <link rel="icon" type="image/svg+xml" href="favicon-quant.svg">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -164,7 +165,7 @@
       justify-content: center;
     }
 
-    .survey-card { max-width: 680px; width: 100%; }
+    .survey-card { max-width: 680px; width: 100%; text-align: center; }
 
     .survey-eyebrow {
       font-size: 10px;
@@ -420,7 +421,10 @@
 
   <section class="hero">
     <div class="corner tl">LEYLAQUANT.COM</div>
-    <div class="corner tr" id="clock"></div>
+    <a href="https://www.linkedin.com/in/leyla-guliyeva" target="_blank" class="corner tr" style="text-decoration:none; display:flex; align-items:center; gap:7px; font-size:13px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      LINKEDIN
+    </a>
 
     <div class="hero-inner">
       <div class="label">Quantitative Research &amp; Strategy</div>
@@ -476,7 +480,7 @@
       <div class="hr"></div>
 
       <div id="vote-area">
-        <div class="vote-label">Which system would you prefer? 🙂</div>
+        <div class="vote-label">Which system would you prefer?</div>
         <div class="vote-buttons">
           <button class="vote-btn" id="btn-a" onclick="selectVote('A')">
             <span class="btn-label">System A</span>
@@ -493,13 +497,13 @@
       </div>
 
       <div id="already-voted" style="display:none;">
-        <div class="thank-you">You have already submitted your response. Thank you for contributing to my research! 🙂</div>
+        <div class="thank-you">You have already submitted your response. Thank you for contributing to my research! :)</div>
       </div>
 
       <div class="results" id="results">
         <div class="thank-you">
           Your response has been recorded.<br>
-          Thank you for contributing to my research! 🙂
+          Thank you for contributing to my research! :)
         </div>
       </div>
     </div>
@@ -510,15 +514,7 @@
   <script>
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw7Cy5fC8kHkEWqaILCPSH_GKinxwAzOqbe7R0NqpIOYY7sxooKkscz1wdGB7ZprrHv/exec";
 
-    function updateClock() {
-      const now = new Date();
-      const h = String(now.getHours()).padStart(2,'0');
-      const m = String(now.getMinutes()).padStart(2,'0');
-      const s = String(now.getSeconds()).padStart(2,'0');
-      document.getElementById('clock').textContent = `${h}:${m}:${s}`;
-    }
-    updateClock();
-    setInterval(updateClock, 1000);
+
 
     let selected = null;
 
